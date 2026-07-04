@@ -1,0 +1,68 @@
+.menu-page { padding-top: 72px; min-height: 100vh; }
+
+.menu-header {
+  text-align: center;
+  padding: 5rem 5% 2.5rem;
+  background: var(--warm-white);
+  border-bottom: 1px solid var(--border);
+}
+.menu-subtitle {
+  font-size: 0.85rem; color: var(--text-muted);
+  letter-spacing: 0.06em; margin-top: 0.5rem;
+}
+
+.category-filter {
+  display: flex; justify-content: center; gap: 0.5rem;
+  padding: 2rem 5%;
+  background: var(--warm-white);
+  border-bottom: 1px solid var(--border);
+}
+.filter-btn {
+  font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase;
+  padding: 0.55rem 1.4rem;
+  border: 1px solid var(--border); background: transparent;
+  color: var(--text-muted); transition: all 0.2s;
+}
+.filter-btn:hover { border-color: var(--amber); color: var(--amber); }
+.filter-btn.active {
+  background: var(--brown-deep); color: var(--cream); border-color: var(--brown-deep);
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 3rem 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.empty-msg {
+  grid-column: 1/-1; text-align: center;
+  color: var(--text-muted); padding: 3rem 0; font-size: 0.9rem;
+}
+
+.addon-banner {
+  text-align: center;
+  background: var(--brown-deep); color: var(--cream);
+  padding: 1.2rem 5%; font-size: 0.85rem; letter-spacing: 0.04em;
+}
+.addon-banner strong { color: var(--amber-light); }
+
+/* STICKY CART BAR */
+.sticky-cart-bar {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 50;
+  background: var(--brown-deep); color: var(--cream);
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1rem 5%;
+  font-size: 0.85rem;
+  box-shadow: 0 -4px 20px rgba(44,24,16,0.15);
+  animation: slideUp 0.3s ease;
+}
+@keyframes slideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
+.sticky-cart-bar .btn-primary { padding: 0.65rem 1.6rem; font-size: 0.72rem; }
+
+@media (max-width: 600px) {
+  .products-grid { grid-template-columns: 1fr; padding: 2rem 4%; }
+  .category-filter { flex-wrap: wrap; }
+}

@@ -1,0 +1,134 @@
+.cart-page { padding-top: 72px; min-height: 100vh; }
+.cart-empty {
+  padding-top: 72px; min-height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+}
+.cart-empty-inner { text-align: center; }
+.empty-icon { font-size: 3rem; margin-bottom: 1rem; }
+.cart-empty-inner h2 {
+  font-family: var(--serif); font-size: 2rem; font-weight: 300;
+  margin-bottom: 0.75rem;
+}
+.cart-empty-inner p { color: var(--text-muted); margin-bottom: 2rem; }
+
+.cart-header {
+  text-align: center;
+  padding: 4rem 5% 2rem;
+  background: var(--warm-white);
+  border-bottom: 1px solid var(--border);
+}
+
+.cart-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 5%;
+}
+
+.cart-section-title {
+  font-family: var(--serif); font-size: 1.3rem; font-weight: 400;
+  color: var(--brown-deep); margin-bottom: 1.5rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid var(--border);
+}
+
+/* CART ITEMS */
+.cart-item {
+  display: flex; align-items: center; gap: 1rem;
+  padding: 1rem 0; border-bottom: 1px solid var(--border);
+}
+.cart-item-info { flex: 1; }
+.cart-item-name { font-size: 1rem; font-weight: 400; color: var(--brown-deep); }
+.cart-item-price { font-size: 0.78rem; color: var(--text-muted); margin-top: 0.2rem; }
+
+.cart-item-controls { display: flex; align-items: center; gap: 0; }
+.qty-btn {
+  width: 30px; height: 30px;
+  border: 1px solid var(--border); background: var(--cream);
+  color: var(--brown-mid); font-size: 1rem;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.15s;
+}
+.qty-btn:hover { background: var(--brown-deep); color: var(--cream); border-color: var(--brown-deep); }
+.qty-val {
+  min-width: 32px; text-align: center; font-size: 0.9rem;
+  border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+  height: 30px; line-height: 30px; background: white;
+}
+.remove-btn {
+  width: 30px; height: 30px; border: none; background: none;
+  color: var(--text-muted); font-size: 0.75rem; margin-left: 0.5rem;
+  transition: color 0.2s;
+}
+.remove-btn:hover { color: #A32D2D; }
+
+.cart-item-subtotal {
+  font-family: var(--serif); font-size: 1.1rem; color: var(--brown-mid);
+  min-width: 60px; text-align: right;
+}
+
+.cart-total-row {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1.5rem 0; border-top: 1px solid var(--border); margin-top: 0.5rem;
+  font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--brown-mid);
+}
+.cart-total-price {
+  font-family: var(--serif); font-size: 1.6rem; color: var(--brown-deep);
+}
+
+.brulee-note {
+  background: var(--warm-white); border: 1px solid var(--border);
+  padding: 1rem 1.2rem; font-size: 0.82rem; color: var(--text-muted);
+  line-height: 1.6; margin-top: 1.5rem;
+}
+.brulee-note strong { color: var(--amber); }
+
+/* FORM */
+.form-row { margin-bottom: 1.2rem; }
+.form-row label {
+  display: block; font-size: 0.68rem; letter-spacing: 0.15em;
+  text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.5rem;
+}
+.form-row input, .form-row select, .form-row textarea {
+  width: 100%; padding: 0.8rem 1rem;
+  background: transparent; border: 1px solid var(--border);
+  color: var(--brown-deep); font-family: var(--sans); font-size: 0.88rem;
+  font-weight: 300; outline: none; transition: border-color 0.2s;
+  appearance: none; -webkit-appearance: none;
+}
+.form-row input:focus, .form-row select:focus, .form-row textarea:focus {
+  border-color: var(--amber);
+}
+.form-row textarea { resize: vertical; }
+
+.toggle-group { display: flex; gap: 0.5rem; }
+.toggle-btn {
+  flex: 1; padding: 0.75rem 1rem;
+  border: 1px solid var(--border); background: transparent;
+  color: var(--brown-deep); font-size: 0.82rem;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  transition: all 0.2s;
+}
+.toggle-btn.active {
+  background: var(--brown-deep); border-color: var(--brown-deep); color: var(--cream);
+}
+
+.form-error {
+  background: #FFF0F0; border: 1px solid #A32D2D;
+  color: #A32D2D; padding: 0.7rem 1rem;
+  font-size: 0.8rem; margin-bottom: 1rem;
+}
+
+.submit-btn { width: 100%; margin-top: 0.5rem; padding: 1rem; font-size: 0.8rem; }
+
+.form-note {
+  font-size: 0.75rem; color: var(--text-muted);
+  text-align: center; margin-top: 1rem; line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .cart-layout { grid-template-columns: 1fr; gap: 2rem; }
+}
